@@ -69,7 +69,7 @@
                    <td>${item['Qty']}</td>
                    <td>${item['TotalPrice']}</td>
                    <td><button onclick="DeleteProduct('${item['_id']}')" class="btn btn-sm btn-danger">Delete</button></td>
-                   <td><button class="btn btn-sm btn-warning">Update</button></td>
+                   <td><button onclick="UpdateProduct('${item['_id']}')" class="btn btn-sm btn-warning">Update</button></td>
 
                </tr>`});
         }
@@ -81,6 +81,10 @@
             window.location.reload();  //page reload instantly
     }
 
+    // Go to updatepage
+function UpdateProduct(product_id){
+            window.location=`update_product.html?id=${product_id}`
+}
 
 
 </script>
